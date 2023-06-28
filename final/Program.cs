@@ -3,15 +3,20 @@
 Console.Clear();
 
 string[] elements = { $"Hello", "2", "world", ":-)" };
-// Console.Write($"{elements.Length}");
-// Console.WriteLine();
+
 PrintArray(elements);
 
 void PrintArray(string[] el)
 {
+    
     for (int i = 0; i < el.Length; i++)
     {
-        Console.Write($"Длина элемента ({el[i]}) в массиве равна: ");
-        Console.WriteLine($"{el[i].Length} ");
+
+        // Console.WriteLine($"Длина элемента ({el[i]}) в массиве равна: {el[i].Length}"); // Добавляем проверку вывода количества символов
+
+        if(el[i].Length <= 3)
+        {
+            Console.WriteLine($"{i} = ({el[i]}) ");
+        }
     }
 }
